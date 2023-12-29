@@ -1,6 +1,12 @@
 ﻿# blog-landing-page
 
 
+# Live URL
+
+```
+ https://task2-lake.vercel.app
+```
+
 # Features
 
 - Fully Responsive Website
