@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -25,8 +26,8 @@
         },
       };
     </script>
-    <script defer type="module" src="./blogs-data.js"></script>
     <script defer src="./responsive-nav.js"></script>
+    <script defer type="module" src="./blogs-data.js"></script>
     <script defer type="module" src="./script.js"></script>
     <title>Blogs Collect</title>
   </head>
@@ -44,10 +45,10 @@
         <ul
           class="lg:col-span-4 justify-center gap-8 items-center ml-16 hidden lg:flex"
         >
-          <li>Home</li>
-          <li>Features</li>
-          <li>User Guide</li>
-          <li>Blog</li>
+          <li class="nav-button cursor-pointer">Home</li>
+          <li class="nav-button cursor-pointer">Features</li>
+          <li class="nav-button cursor-pointer">User Guide</li>
+          <li class="nav-button cursor-pointer">Blog</li>
         </ul>
         <!-- others -->
         <div
@@ -68,6 +69,7 @@
 
         <!-- Mobile Menu -->
         <ul
+          onclick="handleCloseMenu()"
           id="menu"
           class="w-full fixed bg-white -top-[100%] left-0 duration-300 z-[10] min-h-screen"
         >
@@ -109,9 +111,10 @@
             class="fa-solid fa-magnifying-glass absolute left-[3%] top-[30%] text-sm"
           ></i>
           <input
+            id="search"
             type="text"
             placeholder="Search Our Blog by topic or keyword..."
-            class="py-3 pl-12 bg-gray-100 w-full text-[10px] md:text-sm"
+            class="py-3 pl-12 bg-gray-100 w-full text-[10px] md:text-sm focus:outline-none"
           />
         </div>
       </section>
@@ -162,7 +165,7 @@
       <!-- Blog Collection  -->
       <section
         id="collection"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 sm:gap-4 mt-28 mb-20 rounded-2xl h-auto"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 sm:gap-4 mt-28 mb-20 rounded-2xl h-auto"
       >
         <!-- Generate Cards Via Js Script-->
       </section>
