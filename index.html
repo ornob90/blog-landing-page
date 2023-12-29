@@ -25,6 +25,8 @@
         },
       };
     </script>
+    <script defer type="module" src="./blogs-data.js"></script>
+    <script defer type="module" src="./script.js"></script>
     <title>Blogs Collect</title>
   </head>
 
@@ -53,6 +55,7 @@
         </div>
       </section>
     </header>
+
     <main class="w-[90%] mx-auto">
       <!-- Social Media -->
       <section class="grid grid-cols-1 md:grid-cols-2 gap-5 min-h-[350px]">
@@ -97,42 +100,10 @@
 
       <!-- Blog Collection  -->
       <section
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-28 rounded-2xl h-auto"
+        id="collection"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 sm:gap-4 mt-28 mb-20 rounded-2xl h-auto"
       >
-        <!-- Card -->
-        <div class="min-h-[400px] flex flex-col gap-4">
-          <img
-            src="https://miro.medium.com/v2/resize:fit:1400/0*xEJ-vzT5nSsnT0SK"
-            class="h-[200px] w-full object-cover rounded-2xl"
-            alt=""
-          />
-
-          <!-- Card Content -->
-          <div class="flex flex-col gap-3">
-            <h3 class="font-bold text-lg">Exploring the Wonders of AI</h3>
-            <p class="text-light text-sm">
-              Embark on a journey into the fascinating world of Artificial
-              Intelligence (AI). From machine learning to neural networks, this
-              blog delves deep into the transformative impact of AI on our daily
-              lives and industries. Discover the latest advancements, real-world
-              applications, and ethical considerations surrounding this
-              cutting-edge technology.
-            </p>
-            <div class="flex gap-4 items-center mt-3">
-              <div class="h-[50px] w-[50px] rounded-full">
-                <img
-                  src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt=""
-                  class="rounded-full w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h1 class="font-semibold text-lg">Amala Paul</h1>
-                <p class="text-light">Front End Developer</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <!-- Generate Cards Via Js Script-->
       </section>
     </main>
 
