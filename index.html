@@ -54,20 +54,45 @@
           class="col-span-6 lg:col-span-2 flex gap-4 justify-end items-center"
         >
           <button
-            class="hidden lg:block bg-[#E4E7E7] font-medium py-2 px-4 text-[12px]"
+            class="hidden lg:block bg-[#E4E7E7] font-medium py-2 px-4 text-[12px] active:scale-95 duration-300"
           >
             Connect With Us
           </button>
           <button
-            class="hidden lg:block bg-primary text-white font-medium py-2 px-4 text-[12px]"
+            class="hidden lg:block bg-primary text-white font-medium py-2 px-4 text-[12px] active:scale-95 duration-300"
           >
             Sign In/Register
           </button>
-          <i onclick="handleMenu()" class="fa-solid fa-bars lg:hidden"></i>
+          <i onclick="handleOpenMenu()" class="fa-solid fa-bars lg:hidden"></i>
         </div>
 
         <!-- Mobile Menu -->
-        <ul id="menu" class="h-[200px] w-full fixed top-0 left-0 bg-black"></ul>
+        <ul
+          id="menu"
+          class="w-full fixed bg-white -top-[100%] left-0 duration-300 z-[10] min-h-screen"
+        >
+          <li
+            class="flex p-4 gap-4 items-center justify-between w-[90%] mx-auto"
+          >
+            <div class="flex flex-col gap-2 items-center">
+              <button
+                class="block lg:hidden bg-[#E4E7E7] font-medium py-2 px-4 text-[12px] active:scale-95 duration-300"
+              >
+                Connect With Us
+              </button>
+              <button
+                class="block lg:hidden bg-primary text-white font-medium py-2 px-4 text-[12px] active:scale-95 duration-300"
+              >
+                Sign In/Register
+              </button>
+            </div>
+            <i class="fa fa-times" onclick="handleCloseMenu()"></i>
+          </li>
+          <li class="text-center py-4 border-b">Home</li>
+          <li class="text-center py-4 border-b">Features</li>
+          <li class="text-center py-4 border-b">User Guide</li>
+          <li class="text-center py-4 border-b">Blog</li>
+        </ul>
       </nav>
 
       <!-- Header Content -->
