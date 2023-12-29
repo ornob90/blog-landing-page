@@ -26,13 +26,49 @@
       };
     </script>
     <script defer type="module" src="./blogs-data.js"></script>
+    <script defer src="./responsive-nav.js"></script>
     <script defer type="module" src="./script.js"></script>
     <title>Blogs Collect</title>
   </head>
 
   <body class="max-w-[1440px] mx-auto">
     <header class="w-[90%] mx-auto">
-      <nav>hello</nav>
+      <nav class="grid grid-cols-7 py-5 items-center">
+        <!-- title -->
+        <h3
+          class="text-black text-xl md:text-lg lg:text-xl font-bold col-span-1"
+        >
+          <span class="text-primary">Elite</span>Fin
+        </h3>
+        <!-- nav links  -->
+        <ul
+          class="lg:col-span-4 justify-center gap-8 items-center ml-16 hidden lg:flex"
+        >
+          <li>Home</li>
+          <li>Features</li>
+          <li>User Guide</li>
+          <li>Blog</li>
+        </ul>
+        <!-- others -->
+        <div
+          class="col-span-6 lg:col-span-2 flex gap-4 justify-end items-center"
+        >
+          <button
+            class="hidden lg:block bg-[#E4E7E7] font-medium py-2 px-4 text-[12px]"
+          >
+            Connect With Us
+          </button>
+          <button
+            class="hidden lg:block bg-primary text-white font-medium py-2 px-4 text-[12px]"
+          >
+            Sign In/Register
+          </button>
+          <i onclick="handleMenu()" class="fa-solid fa-bars lg:hidden"></i>
+        </div>
+
+        <!-- Mobile Menu -->
+        <ul id="menu" class="h-[200px] w-full fixed top-0 left-0 bg-black"></ul>
+      </nav>
 
       <!-- Header Content -->
       <section class="flex flex-col justify-center items-center my-10 gap-4">
